@@ -1,0 +1,22 @@
+ConvNeXt V2
+Copyright (c) Meta Platforms, Inc. and affiliates.
+Upstream project: https://github.com/facebookresearch/ConvNeXt-V2
+Upstream source files: models/convnextv2.py and models/utils.py
+
+The Python code is distributed under the MIT license. The accompanying
+LICENSE is an unmodified copy of the upstream LICENSE, which also contains
+the CC-BY-NC 4.0 terms for official ImageNet pre-trained and fine-tuned models.
+Those model weights are subject to their own terms, separate from the MIT
+code license.
+
+This directory contains the ConvNeXt V2 adaptation used by WAM/WovenAnchor.
+Local adaptations include forward_features_4 and forward_features_8 for
+feature-pyramid outputs, the timm.layers import path, and a subset of the
+upstream utilities. The original upstream commit of this copy was not
+recorded. The LICENSE was obtained from the upstream main branch; this does
+not identify the revision of the vendored Python code.
+
+The code was relocated from src/woven_anchor/utils/convnextv2. Executable
+code and model definitions were preserved during the relocation.
+
+This provenance notice was added by WovenAnchor; it is not an upstream NOTICE.

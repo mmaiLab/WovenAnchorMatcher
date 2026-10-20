@@ -1,0 +1,23 @@
+GlueFactory
+Upstream project: https://github.com/cvg/glue-factory
+License: Apache License 2.0 (see LICENSE in this directory)
+
+This directory contains a subset of GlueFactory source code. The original
+upstream commit of the vendored copy was not recorded. The existing Python
+files were relocated from src/gluefactory without changes to their contents.
+The bundled LICENSE was obtained from the upstream main branch; this does
+not identify the revision of the vendored source code.
+
+The following files outside this directory also contain modified GlueFactory
+code, as documented in their source headers, and are covered by the same
+license:
+  src/utils/warppers.py        (from gluefactory/geometry/wrappers.py)
+  src/utils/warppers_utils.py  (from gluefactory/geometry/utils.py)
+
+This provenance notice was added by WovenAnchor; it is not an upstream NOTICE.
+
+Additional inherited source:
+  utils/stdout_capturing.py is based on Sacred, as stated in its source header.
+  Copyright (c) 2014 Klaus Greff. Its MIT license is preserved in
+  LICENSES/Sacred-MIT.txt at the repository root. The adaptation credits
+  Paul-Edouard Sarlin. These underlying terms are not replaced by Apache-2.0.

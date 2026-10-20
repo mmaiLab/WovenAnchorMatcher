@@ -1,0 +1,6 @@
+/logs/
+/visualization/
+/dump/
+/data/
+/weights/
+__pycache__/
