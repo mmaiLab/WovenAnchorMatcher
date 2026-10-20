@@ -1,6 +1,4 @@
-# WovenAnchor
-
-Official implementation of **WovenAnchor Matcher (WAM)**.
+# WovenAnchor Matcher (WAM)
 
 ## Setup
 
@@ -90,7 +88,11 @@ Use `configs/data/megadepth_test_0022.py` with `--vis_name 0022` for scene 0022.
 
 ## License
 
-Original contributions use the [MIT license](LICENSE). The framework builds on
+Original code contributions are licensed under [MIT](LICENSE); inherited components
+retain their respective licenses. The pretrained checkpoint is released under
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+The framework builds on
 JamMa and LoFTR, with components from Mamba, ConvNeXt V2, and GlueFactory.
 See [third-party notices](THIRD_PARTY_NOTICES.md) for code licenses, credits,
 and dataset provenance and terms.

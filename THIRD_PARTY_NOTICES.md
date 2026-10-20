@@ -69,6 +69,11 @@ does not replace applicable upstream weight terms with the JamMa code license.
 No third-party checkpoint is bundled in this source package. The root MIT
 license is not a license grant for pretrained or derived model weights.
 
+## WovenAnchor checkpoint
+
+The pretrained WovenAnchor checkpoint (`outdoor.ckpt`) is released under
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
 ## Dataset assets
 
 `assets/` contains evaluation pair lists and metadata inherited through
