@@ -9,6 +9,7 @@ import torch
 import torch.nn.functional as F
 
 from .common import (
+    _context_visualization_stem,
     _make_context_visualization_grid,
     _set_context_visualization_title,
     _to_display_image,
@@ -331,9 +332,11 @@ def make_woven_receptive_field_figures(
             )
 
         operator_slug = receptive_field_visualization["operator_slug"]
-        output_stem = (
-            f"{filename_prefix}_pair{batch_index}_{operator_slug}_"
-            f"spatial_block{block_index + 1}_layer{layer_index}_multipoint_erf"
+        output_stem = _context_visualization_stem(
+            filename_prefix,
+            f"{operator_slug}_erf",
+            layer_index,
+            pair_index=batch_index if batch_size > 1 else None,
         )
         output_path = output_dir / f"{output_stem}.png"
         fig.savefig(output_path, bbox_inches="tight")

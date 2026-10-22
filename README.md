@@ -65,8 +65,6 @@ Select a visualization with `--vis`:
 
 `--vis_max_pairs` defaults to 10; use `-1` for all pairs or `0` to disable
 visualization. This limits figures only; evaluation still processes all pairs.
-Use `--vis_name NAME` to label filenames for separate scenes or checkpoints.
-If omitted, the ablation config name or `wam` is used.
 
 ```bash
 bash scripts/reproduce_test/outdoor.sh megadepth --vis anchor --vis_max_pairs 5

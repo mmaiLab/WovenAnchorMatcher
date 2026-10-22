@@ -9,6 +9,7 @@ import torch.nn.functional as F
 from matplotlib.patches import Patch
 
 from .common import (
+    _context_visualization_stem,
     _make_context_visualization_grid,
     _set_context_visualization_title,
     _to_display_image,
@@ -147,7 +148,6 @@ def make_anchor_probability_figures(
                     axis.set_xticks([])
                     axis.set_yticks([])
 
-            offset_y, offset_x = phase0["offset"]
             block_index = anchor_visualization["anchor_block_index"]
             layer_index = anchor_visualization["layer_index"]
             fig.suptitle(f"ACA-{block_index + 1}: learned anchor assignments")
@@ -170,10 +170,14 @@ def make_anchor_probability_figures(
                     pad=0.008,
                 )
 
-            output_path = output_dir / (
-                f"{filename_prefix}_pair{batch_index}_anchor_block{block_index}_"
-                f"layer{layer_index}_{phase0['name']}_y{offset_y}_x{offset_x}.png"
+            output_stem = _context_visualization_stem(
+                filename_prefix,
+                "anchor_prob",
+                layer_index,
+                phase=phase0["name"],
+                pair_index=batch_index if len(image0) > 1 else None,
             )
+            output_path = output_dir / f"{output_stem}.png"
             fig.savefig(output_path, bbox_inches="tight")
             plt.close(fig)
             saved_paths.append(output_path)

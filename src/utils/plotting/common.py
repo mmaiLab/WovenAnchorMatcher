@@ -1,4 +1,4 @@
-"""Shared image conversion and figure layout helpers."""
+"""Shared visualization naming, image conversion, and figure layout helpers."""
 
 from textwrap import fill
 
@@ -11,6 +11,16 @@ imagenet_mean = torch.tensor([0.485, 0.456, 0.406])
 
 
 imagenet_std = torch.tensor([0.229, 0.224, 0.225])
+
+
+def _context_visualization_stem(
+    filename_prefix, kind, layer_index, phase=None, pair_index=None
+):
+    """Name a layer visualization, adding a pair index only for multi-pair batches."""
+    if pair_index is not None:
+        filename_prefix = f"{filename_prefix}_pair{pair_index}"
+    stem = f"{filename_prefix}_{kind}_layer{layer_index}"
+    return f"{stem}_{phase}" if phase is not None else stem
 
 
 def _to_display_image(image):
