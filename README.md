@@ -1,5 +1,7 @@
 # WovenAnchor Matcher (WAM)
 
+Official implementation of **WovenAnchor Matcher: Specialized Intra- and Inter-Image Context Modeling for Feature Matching** ([arXiv](https://arxiv.org/abs/2610.30799)).
+
 ## Setup
 
 Follow the [installation and dataset setup guide](docs/SETUP.md).
@@ -83,6 +85,22 @@ python test.py configs/data/megadepth_test_0015.py configs/woven_anchor/outdoor/
 ```
 
 Use `configs/data/megadepth_test_0022.py` with `--vis_name 0022` for scene 0022.
+
+## Citation
+
+If you find WovenAnchor Matcher useful, please cite:
+
+```bibtex
+@misc{li2026wovenanchormatcher,
+  title         = {{WovenAnchor Matcher}: Specialized Intra- and Inter-Image Context Modeling for Feature Matching},
+  author        = {Zhiyang Li and Ruijiang Jin and Thibaut Klenke and Yusuke Sekikawa and Nakamasa Inoue},
+  year          = {2026},
+  eprint        = {2610.30799},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2610.30799}
+}
+```
 
 ## License
 
